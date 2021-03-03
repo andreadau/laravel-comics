@@ -11,7 +11,7 @@
         </main>
         <!-- Footer -->
         <footer>
-            @include('layouts.partials.navbar')
+            @include('layouts.partials.footer')
         </footer>
     </div>
 </body>
