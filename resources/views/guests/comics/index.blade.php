@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="my_container">
+    <div class="current_container">
         <div class="label_comics text-uppercase">
             <h1>Comics & Graphic novels</h1>
         </div>

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;
 
 300;400;500;700;900&display=swap);@charset "UTF-8";
 
@@ -10952,6 +10952,7 @@ html {
 
 body {
   background-color: white;
+  min-height: 100vh;
 }
 
 nav {
@@ -10989,6 +10990,7 @@ nav {
 .my_container {
   width: 70%;
   position: relative;
+  margin: auto;
 }
 
 .nav_bot {
@@ -11034,6 +11036,7 @@ nav {
 main {
   background-color: white;
   margin-top: 40px;
+  min-height: 100vh;
 }
 
 .label_comics {
@@ -11160,5 +11163,112 @@ main {
 
 .current_comics {
   padding: 50px 20px 0 0;
+}
+
+.pre-footer {
+  background-color: #0282f9;
+  display: flex;
+  align-items: center;
+}
+
+.footer_container {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+
+.footer_container img {
+  margin-right: 5px;
+}
+
+.footer_container span {
+  color: white;
+}
+
+.mid_footer {
+  background-image: url(/images/footer-bg.jpg?dfd68d2946f211e1b678af05fd2f830b);
+}
+
+.mid_footer p {
+  color: gray;
+  margin-bottom: 0;
+  padding-bottom: 50px;
+}
+
+.mid_footer p strong {
+  color: #0282f9;
+}
+
+.logo_mid_footer {
+  background-image: url(/images/logo-background-v2.png?f4404ce9dc132a08a47f19e3f73f1417);
+  background-size: contain;
+  z-index: 20;
+}
+
+.mid_link {
+  display: flex;
+  width: 70%;
+  padding: 50px 0;
+}
+
+.link_footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.link_footer h1 {
+  color: white;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  padding: 10px 20px 10px 0;
+}
+
+.link_footer a {
+  color: gray;
+  padding-right: 20px;
+}
+
+.end_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.end_footer {
+  display: flex;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 50px 0;
+}
+
+.btn_blue {
+  padding: 10px;
+  border: 3px solid #0282f9;
+  color: white;
+}
+
+.btn_blue:hover {
+  background-color: #0282f9;
+  color: white;
+  text-decoration: none;
+}
+
+.follow_btn {
+  display: flex;
+  align-items: center;
+}
+
+.follow_btn h1 {
+  color: #0282f9;
+  font-weight: bolder;
+  font-size: 1.4em;
+  margin-right: 10px;
+}
+
+.follow_btn i {
+  color: gray;
+  padding: 0 10px;
 }
 
