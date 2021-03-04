@@ -6,7 +6,7 @@
             @include('layouts.partials.navbar')
         </div>
         <!-- Main -->
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
         <!-- Footer -->
