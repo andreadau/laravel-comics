@@ -79,6 +79,63 @@
         </div>
     </div>
     <!-- current series -->
-    <div class="current_series">
+    <div class="current_container">
+        <div class="label_comics text-uppercase">
+            <h1>current series</h1>
+        </div>
     </div>
-@endsection
+        <div class="current_series">
+            <div class="current_row d-flex">
+                <div class="current_comics">
+                    <img src="img/vampire.jpg" alt="">
+                    <h2 class="title">BATMAN</h2>
+                </div>
+                <div class="current_comics">
+                    <img src="img/batbot.jpg" alt="">
+                    <h2 class="title">BATMAN</h2>
+                </div>
+                <div class="current_comics">
+                    <img src="img/batbb.jpg" alt="">
+                    <h2 class="title">BATMAN</h2>
+                </div>
+                <div class="current_comics">
+                    <img src="img/batrac.jpg" alt="">
+                    <h2 class="title">BATMAN</h2>
+                </div>
+                <div class="current_comics">
+                    <img src="img/batcat.jpg" alt="">
+                    <h2 class="title">BATMAN</h2>
+                </div>
+                <div class="current_comics">
+                    <img src="img/batwhitek.jpg" alt="">
+                    <h2 class="title">BATMAN</h2>
+                </div>
+            </div>
+            <div class="current_row d-flex">
+                <div class="current_comics">
+                    <img src="img/futuredec.jpg" alt="">
+                    <h2 class="title">BATMAN</h2>
+                </div>
+                <div class="current_comics">
+                    <img src="img/futuregreen.jpg" alt="">
+                    <h2 class="title">BATMAN</h2>
+                </div>
+                <div class="current_comics">
+                    <img src="img/futurecat.jpg" alt="">
+                    <h2 class="title">BATMAN</h2>
+                </div>
+                <div class="current_comics">
+                    <img src="img/futureacqua.jpg" alt="">
+                    <h2 class="title">BATMAN</h2>
+                </div>
+                <div class="current_comics">
+                    <img src="img/futureharley.jpg" alt="">
+                    <h2 class="title">BATMAN</h2>
+                </div>
+                <div class="current_comics">
+                    <img src="img/futurebat.jpg" alt="">
+                    <h2 class="title">BATMAN</h2>
+                </div>
+            </div>
+        </div>
+            @endsection
