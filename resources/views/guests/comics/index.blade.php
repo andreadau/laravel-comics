@@ -25,31 +25,15 @@
                 <a class="nav-link disabled" href="#">See all</a>
             </li>
         </ul>
-        <div class="comics">
-            <img src="img/batman.jpg" alt="">
-            <h4 class="title">BATMAN</h4>
-            <p class="availability">AVAIABLE NOW</p>
-        </div>
-        <div class="comics">
-            <img src="img/crime.jpg" alt="">
-            <h4 class="title">BATMAN</h4>
-            <p class="availability">AVAIABLE NOW</p>
-        </div>
-        <div class="comics">
-            <img src="img/infinite.jpg" alt="">
-            <h4 class="title">BATMAN</h4>
-            <p class="availability">AVAIABLE NOW</p>
-        </div>
-        <div class="comics">
-            <img src="img/manbat.jpg" alt="">
-            <h4 class="title">BATMAN</h4>
-            <p class="availability">AVAIABLE NOW</p>
-        </div>
-        <div class="comics">
-            <img src="img/wonderw.jpg" alt="">
-            <h4 class="title">BATMAN</h4>
-            <p class="availability">AVAIABLE NOW</p>
-        </div>
+        @foreach($comics as $comic)
+             <div class="comics text-uppercase">
+               <a href="{{route('comics', $comic->id )}}">
+                 <img src="storage/{{$comic->img}}" alt="">
+               </a>
+               <h4>{{$comic->title}}</h4>
+               <p>{{$comic->avaiability?'available now':'not available'}}</p>
+             </div>
+      @endforeach
     </div>
     <!-- must reads -->
     <div class="container py-5 must_reads_container">

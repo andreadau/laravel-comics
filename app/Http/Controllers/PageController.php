@@ -2,27 +2,32 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Comic;
 
 class PageController extends Controller
 {
     /**
-    * Show the guest Homepage.
-    *
-    * @return \Illuminate\Contracts\Support\Renderable
-    */
-   public function index()
-   {
-       return view('guests.comics.index');
-   }
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $comics = Comic::all();
+        return view('guests.comics.index', compact('comics'));
+    }
 
-       /**
-    * Show the guest show.
-    *
-    * @return \Illuminate\Contracts\Support\Renderable
-    */
-   public function about()
-   {
-       return view('guests.comics.show');
-   }
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Comic  $comic
+     * @return \Illuminate\Http\Response
+     */
+    public function show($comic)
+    {
+        $comic = Comic::find($comic);
+        return view('guests.comics.show', compact('comic'));
+    }
 }

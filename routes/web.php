@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PageController@index')->name('comics');
-Route::get('about', 'PageController@about')->name('show');
+Route::get('/', 'PageController@index');
+Route::get('comics/{id}', 'PageController@show')->name('comics');
 
 Auth::routes(['register' => false]);
 

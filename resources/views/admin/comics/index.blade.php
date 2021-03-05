@@ -7,7 +7,10 @@ GO TO ADMIN PANEL
     <div class="row justify-content-center">
         <div class="col-md-12">
           <h1>COMICS</h1>
+          <br>
           <a href="{{route('admin.comics.create')}}"class="btn btn-primary">ADD COMICS</a>
+          <br>
+          <br>
           <table class="table table-striped">
           <thead>
           <tr>
@@ -22,6 +25,7 @@ GO TO ADMIN PANEL
             <th>rated</th>
             <th>creazione</th>
             <th>update</th>
+
           </tr>
           </thead>
           <tbody>

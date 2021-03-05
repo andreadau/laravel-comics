@@ -37,6 +37,11 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'img' => 'nullable | image | max:500',
+            ]);
         $img = Storage::disk('public')->put('posts_img', $request->img);
         $newComic = new Comic;
         $newComic->title = $request->title;
