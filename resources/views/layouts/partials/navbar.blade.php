@@ -1,25 +1,25 @@
 <nav>
     <div class="nav_top">
         <div class="selection_nav bg-white">
-            <img src="img/DC_desktop_blue.svg" alt="">
+            <img src="{{ asset('img/DC_desktop_blue.svg')}}" alt="">
         </div>
         <div class="selection_nav">
-            <img src="img/DCUI_desktop.svg" alt="">
+            <img src="{{ asset('img/DCUI_desktop.svg')}}" alt="">
         </div>
         <div class="selection_nav">
-            <img src="img/DC_SHOP_desktop.svg" alt="">
+            <img src="{{ asset('img/DC_SHOP_desktop.svg')}}" alt="">
         </div>
         <div class="selection_nav">
-            <img src="img/DC_community.svg" alt="">
+            <img src="{{ asset('img/DC_community.svg')}}" alt="">
         </div>
         <div class="selection_nav">
-            <img src="img/DC_on_HBOMAX_desktop.svg" alt="">
+            <img src="{{ asset('img/DC_on_HBOMAX_desktop.svg')}}" alt="">
         </div>
     </div>
     <div class="my_container">
         <div class="nav_bot my-4">
             <div class="nav-bot-logo">
-                <img src="img/logo.png" alt="">
+                <img src="{{ asset('img/logo.png')}}" alt="">
             </div>
             <div class="nav-bot-link">
                 <ul class="nav justify-content-center text-uppercase">
@@ -27,7 +27,7 @@
                         <a class="nav-link" href="#">Characters</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Comics</a>
+                        <a class="nav-link" href="/">Comics</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Movies</a>

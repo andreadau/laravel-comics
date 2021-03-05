@@ -1,26 +1,35 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="hero_img_comic">
-        <div class="blue_band">
+
+    <div class="hero_img_comic" style="background-image: url(../storage/{{$comic->img }});
+        background-repeat: no-repeat; background-size: cover; background-position: 50%">
+        <div class="container">
+            <img src="../storage/{{$comic->img}}" alt="">
         </div>
-        <img src="" alt="">
     </div>
-    <div class="container">
+    <div class="blue_band">
+    </div>
+
+    <div class="container py-5">
         <div class="row clearfix">
-            <div class="col-md-12">
+            <div class="col-md-7">
                 <div class="price_container">
-                <h1 class="text-uppercase"></h1>
-                <div class="comics_price">
-                    <span>U.S Price : {{ $comic->price }}</span>
-                    <span>{{$comic->avaiability?'AVAILABLE NOW':'NOT AVAILABLE'}}</span>
-                    <span>Check Avaiability</span>
-                </div>
-                <p>{{ $comic->description }}</p>
+                    <h1 class="text-uppercase">{{ $comic->title }}</h1>
+                    <div class="comics_price">
+                        <div class="price_c">
+                            <span>U.S Price : ${{ $comic->price }}</span>
+                            <span class="span_price">{{$comic->avaiability?'AVAILABLE':'NOT AVAILABLE'}}</span>
+                        </div>
+                        <div class="avaiability_check">
+                            <span>Check Avaiability</span>
+                        </div>
+                    </div>
+                    <p>{{ $comic->description }}</p>
                 </div>
             </div>
         </div>
-        <div class="row clearfix">
+        <div class="row clearfix py-5">
             <div class="col-md-6">
                 <table class="table">
                     <h2>Talent</h2>

@@ -144,6 +144,11 @@ main {
     p {
         color: $blue;
     }
+    a {
+        img {
+            width: 100%;
+        }
+    }
 }
 
 .must_reads_container {
@@ -319,3 +324,45 @@ main {
 // Show Page
 //
 //
+
+
+.hero_img_comic {
+    margin-top: -30px;
+    height: 500px;
+    position: relative;
+    img {
+        width: 250px;
+        position: absolute;
+        left: 20%;
+        bottom: -40px;
+    }
+}
+.blue_band {
+    height: 80px;
+    background-color: $blue;
+    padding-bottom: 50px;
+}
+.comics_price {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    background-color: #55ba59;
+    color: white;
+    margin: 30px 0;
+}
+.span_price {
+    padding-top: 1px;
+    font-size: 0.9rem;
+}
+.price_c {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    background-color: #55ba59;
+    padding: 10px;
+}
+.avaiability_check {
+    border-left: 1px solid #1e1e1e;
+    background-color: #55ba59;
+    padding: 10px;
+}

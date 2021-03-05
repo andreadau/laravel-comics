@@ -1,19 +1,19 @@
 <div class="pre-footer">
     <div class="footer_container text-uppercase">
         <div class="footer_card">
-        <img src="img/buy-bar-DCUI.svg" alt="">
+        <img src="{{ asset('img/buy-bar-DCUI.svg') }}" alt="">
         <span>Digital comics</span>
         </div>
         <div class="footer_card">
-        <img src="img/buy-bar-DCshop.svg" alt="">
+        <img src="{{ asset('img/buy-bar-DCshop.svg') }}" alt="">
         <span>Dc merchandise</span>
         </div>
         <div class="footer_card">
-        <img src="img/buy-bar-subscription.svg" alt="">
+        <img src="{{ asset('img/buy-bar-subscription.svg') }}" alt="">
         <span>Print subscription</span>
         </div>
         <div class="footer_card">
-        <img src="img/buy-bar-locator.svg" alt="">
+        <img src="{{ asset('img/buy-bar-locator.svg') }}" alt="">
         <span>comic shop locator</span>
         </div>
     </div>
