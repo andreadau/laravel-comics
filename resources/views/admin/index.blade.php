@@ -1,9 +1,16 @@
 @extends('layouts.dashboard')
-
+@section('title')
+ADMIN PANEL
+@endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="col-md-2">
+        <p><a href="{{route('admin.comics.index')}}">comics</a></p>
+        <p><a href="{{route('admin.artists.index')}}">artists</a></p>
+        <p><a href="{{route('admin.writers.index')}}">writers</a></p>
+        </div>
+        <div class="col-md-10">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 

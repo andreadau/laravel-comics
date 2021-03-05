@@ -3,8 +3,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand" href="{{ url('/admin') }}">
+                    @yield('title')
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -52,9 +52,7 @@
         </nav>
         <div class="container py-4">
             <div class="row">
-                <div class="col-xs-12 col-md-3 col-lg-3">
-                </div>
-                <main class="col-xs-12 col-md-9 col-lg-9">
+                <main class="col-xs-12 col-md-12 col-lg-12">
                     @yield('content')
                 </main>
             </div>
