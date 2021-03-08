@@ -17,6 +17,7 @@ class CreateComicsTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('img')->nullable();
+            $table->string('cover')->nullable();
             $table->float('price',6,2);
             $table->boolean('avaiability');
             $table->text('description');

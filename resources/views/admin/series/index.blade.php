@@ -6,9 +6,9 @@ GO TO ADMIN PANEL
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-          <h1>WRITERS</h1>
+          <h1>SERIES</h1>
           <br>
-          <a href="{{route('admin.writers.create')}}"class="btn btn-primary">ADD WRITER</a>
+          <a href="{{route('admin.series.create')}}"class="btn btn-primary">ADD SERIE</a>
           <br>
           <br>
           <table class="table table-striped">
@@ -22,24 +22,24 @@ GO TO ADMIN PANEL
           </thead>
           <tbody>
 
-          @foreach ($writers as $writer)
+          @foreach ($series as $serie)
             <tr>
 
-              <td>{{$writer->id}}</td>
-              <td>{{$writer->name}}</td>
-              <td>{{$writer->created_at}}</td>
-              <td>{{$writer->updated_at}}</td>
-
+              <td>{{$serie->id}}</td>
+              <td>{{$serie->name}}</td>
+              <td>{{$serie->created_at}}</td>
+              <td>{{$serie->updated_at}}</td>
+              <td><img src="{{asset('storage/' . $serie->img )}}" class="img_cover" alt=""></td>
               <td>
-                <form action="{{route('admin.writers.show', $writer->id )}}" method="get">
+                <form action="{{route('admin.series.show', $serie->id )}}" method="get">
                   @csrf
                   <button type="submit" class="btn btn-primary"> <i class="fa fa-eye" aria-hidden="true"></i> </button>
                 </form>
-                <form action="{{route('admin.writers.edit', $writer->id )}}" method="get">
+                <form action="{{route('admin.series.edit', $serie->id )}}" method="get">
                   @csrf
                  <button type="submit" class="btn btn-warning"><i class="fas fa-edit"></i> </button>
                 </form>
-                <form action="{{route('admin.writers.destroy', $writer->id )}}" method="post">
+                <form action="{{route('admin.series.destroy', $serie->id )}}" method="post">
                   @csrf
                   @method('delete')
                  <button type="submit" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> </button>

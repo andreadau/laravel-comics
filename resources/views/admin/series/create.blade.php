@@ -5,19 +5,24 @@ GO TO ADMIN PANEL
 @section('content')
 
 <div class="container">
+<h1>ADD A NEW SERIE</h1>
 
-  <h1>EDIT ARTIST</h1>
-      <form action="{{route('admin.artists.update', $artist)}}" method="post">
+      <form action="{{route('admin.series.store')}}" method="post" enctype="multipart/form-data">
         @csrf
-        @method('PUT')
       <!-- Name -->
+
       <div class="form-group">
         <label for="name">name:</label>
-        <input type="text" class="form-control" id="name" name="name" value="{{$artist->name}}">
+        <input type="text" class="form-control" id="name" name="name">
+      </div>
+      <!-- Image -->
+
+      <div class="form-group">
+        <label for="img">Image</label>
+        <input type="file" class="form-control-file" name="img" id="img">
       </div>
 
-
-      <button type="submit" class="btn btn-success">EDIT</button>
+      <button type="submit" class="btn btn-success">ADD</button>
       </form>
       @if ($errors->any())
           <div class="alert">
@@ -27,4 +32,5 @@ GO TO ADMIN PANEL
           </div>
       @endif
 </div>
+
 @endsection

@@ -37,9 +37,13 @@ class ArtistController extends Controller
      */
     public function store(Request $request)
     {
-        $artist = new Artist;
-        $artist->name = $request->name;
-        $artist->save();
+        $request = $request->validate([
+            'name' => 'required',
+          ]);
+
+        $newArtist = new Artist;
+        $newArtist->name = $request['name'];
+        $newArtist->save();
         return redirect()->route('admin.artists.index');
     }
 
@@ -49,7 +53,7 @@ class ArtistController extends Controller
      * @param  \App\Artist  $artist
      * @return \Illuminate\Http\Response
      */
-    public function show( $artist)
+    public function show($artist)
     {
         $artist = Artist::find($artist);
         return view('admin.artists.show', compact('artist'));
@@ -61,7 +65,7 @@ class ArtistController extends Controller
      * @param  \App\Artist  $artist
      * @return \Illuminate\Http\Response
      */
-    public function edit( $artist)
+    public function edit($artist)
     {
           $artist = Artist::find($artist);
           return view('admin.artists.edit', compact('artist'));
@@ -76,8 +80,12 @@ class ArtistController extends Controller
      */
     public function update(Request $request, $artist)
     {
+        $request = $request->validate([
+            'name' => 'required',
+          ]);
+
         $artist = Artist::find($artist);
-        $artist->name = $request->name;
+        $artist->name = $request['name'];
         $artist->update();
         return redirect()->route('admin.artists.index');
 
@@ -89,7 +97,7 @@ class ArtistController extends Controller
      * @param  \App\Artist  $artist
      * @return \Illuminate\Http\Response
      */
-    public function destroy( $artist)
+    public function destroy($artist)
     {
         $artist = Artist::find($artist);
         $artist->delete();

@@ -4,12 +4,22 @@ GO TO ADMIN PANEL
 @endsection
 @section('content')
 <div class="container">
-<h2>Name</h2>
-<h2>{{$artist->name}}</h2>
-<h2>created_at</h2>
-<p>{{$artist->created_at}}</p>
-<h2>updated_at</h2>
-<p>{{$artist->updated_at}}</p>
+<table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>created_at</th>
+                <th>updated_at</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">{{$artist->name}}</td>
+                <td>{{$artist->created_at}}</td>
+                <td>{{$artist->updated_at}}</td>
+            </tr>
+        </tbody>
+    </table>
 <a href="{{route('admin.artists.index')}}"class="btn btn-primary">GO BACK</a>
 </div>
 @endsection

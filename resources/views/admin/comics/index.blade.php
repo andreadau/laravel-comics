@@ -25,6 +25,7 @@ GO TO ADMIN PANEL
             <th>rated</th>
             <th>creazione</th>
             <th>update</th>
+            <th>cover</th>
 
           </tr>
           </thead>
@@ -43,6 +44,7 @@ GO TO ADMIN PANEL
               <td>{{$comic->rated}}</td>
               <td>{{$comic->created_at}}</td>
               <td>{{$comic->updated_at}}</td>
+              <td><img src="{{asset('storage/' . $comic->img )}}" class="img_cover" alt=""></td>
 
               <td>
               <form action="{{route('admin.comics.show', $comic )}}" method="get">

@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Comic;
+use App\Must;
+use App\Serie;
+
 
 class PageController extends Controller
 {
@@ -16,7 +19,9 @@ class PageController extends Controller
     public function index()
     {
         $comics = Comic::all();
-        return view('guests.comics.index', compact('comics'));
+        $musts = Must::all();
+        $series = Serie::all();
+        return view('guests.comics.index', compact('comics', 'musts', 'series'));
     }
 
     /**

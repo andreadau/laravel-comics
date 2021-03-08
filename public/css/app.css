@@ -11149,6 +11149,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   padding-bottom: 25px;
 }
@@ -11156,6 +11157,7 @@ main {
 .current_row {
   display: flex;
   flex-wrap: wrap;
+  width: 70%;
 }
 
 .current_row h2 {
@@ -11194,6 +11196,8 @@ main {
 
 .mid_footer {
   background-image: url(/images/footer-bg.jpg?dfd68d2946f211e1b678af05fd2f830b);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .mid_footer p {
@@ -11280,6 +11284,11 @@ main {
   margin-top: -30px;
   height: 500px;
   position: relative;
+  height: 500px;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero_img_comic img {
@@ -11321,5 +11330,14 @@ main {
   border-left: 1px solid #1e1e1e;
   background-color: #55ba59;
   padding: 10px;
+}
+
+.img_cover {
+  width: 200px;
+}
+
+.alert {
+  color: red;
+  font-size: 2em;
 }
 

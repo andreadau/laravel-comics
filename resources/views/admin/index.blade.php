@@ -9,6 +9,8 @@ ADMIN PANEL
         <p><a href="{{route('admin.comics.index')}}">comics</a></p>
         <p><a href="{{route('admin.artists.index')}}">artists</a></p>
         <p><a href="{{route('admin.writers.index')}}">writers</a></p>
+        <p><a href="{{route('admin.musts.index')}}">musts</a></p>
+        <p><a href="{{route('admin.series.index')}}">series</a></p>
         </div>
         <div class="col-md-10">
             <div class="card">

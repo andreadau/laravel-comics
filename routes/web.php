@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PageController@index');
 Route::get('comics/{id}', 'PageController@show')->name('comics');
 
-Auth::routes(['register' => false]);
+Auth::routes();
 
 Route::middleware('auth')->namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
 
@@ -24,4 +24,7 @@ Route::middleware('auth')->namespace('Admin')->prefix('admin')->name('admin.')->
     Route::resource('comics', 'ComicController');
     Route::resource('artists', 'ArtistController');
     Route::resource('writers', 'WriterController');
+    Route::resource('musts', 'MustController');
+    Route::resource('series', 'SerieController');
+
 }); 

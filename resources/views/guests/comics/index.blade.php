@@ -39,27 +39,14 @@
     <div class="container py-5 must_reads_container">
             <h1 class="text-uppercase">must reads</h1>
         <div class="must_reads">
-            <div class="must_reads_comics">
-                <img src="img/connect.jpg" alt="">
-                <h4 class="subtitle text-uppercase">Lorem ipsum dolor sit amet consectetur</h4>
-                <h3 class="title text-uppercase">Lorem ipsum dolor</h3>
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Natus sapiente voluptatem ipsam vel, accusantium fugit.</p>
+        @foreach($musts as $must)
+             <div class="must_reads_comics">
+                <img src="storage/{{$must->img}}" alt="">
+                <h4 class="serie text-uppercase">{{$must->serie}}</h4>
+                <h3 class="title text-uppercase">{{$must->name}}</h3>
+                <p class="subtitle">{{$must->subtitle}}</p>
             </div>
-            <div class="must_reads_comics">
-                <img src="img/sandman.jpg" alt="">
-                <h4 class="subtitle text-uppercase">Lorem ipsum dolor sit amet consectetur</h4>
-                <h3 class="title text-uppercase">Lorem ipsum dolor</h3>
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Natus sapiente voluptatem ipsam vel, accusantium fugit.</p>
-            </div>
-            <div class="must_reads_comics">
-                <img src="img/wonder.jpg" alt="">
-                <h4 class="subtitle text-uppercase">Lorem ipsum dolor sit amet consectetur</h4>
-                <h3 class="title text-uppercase">Lorem ipsum dolor</h3>
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Natus sapiente voluptatem ipsam vel, accusantium fugit.</p>
-            </div>
+      @endforeach
         </div>
     </div>
     <!-- current series -->
@@ -70,56 +57,12 @@
     </div>
         <div class="current_series">
             <div class="current_row d-flex">
-                <div class="current_comics">
-                    <img src="img/vampire.jpg" alt="">
-                    <h2 class="title">BATMAN</h2>
+                @foreach($series as $serie)
+               <div class="current_comics">
+                    <img src="storage/{{$serie->img}}" alt="">
+                    <h2 class="title">{{$serie->name}}</h2>
                 </div>
-                <div class="current_comics">
-                    <img src="img/batbot.jpg" alt="">
-                    <h2 class="title">BATMAN</h2>
-                </div>
-                <div class="current_comics">
-                    <img src="img/batbb.jpg" alt="">
-                    <h2 class="title">BATMAN</h2>
-                </div>
-                <div class="current_comics">
-                    <img src="img/batrac.jpg" alt="">
-                    <h2 class="title">BATMAN</h2>
-                </div>
-                <div class="current_comics">
-                    <img src="img/batcat.jpg" alt="">
-                    <h2 class="title">BATMAN</h2>
-                </div>
-                <div class="current_comics">
-                    <img src="img/batwhitek.jpg" alt="">
-                    <h2 class="title">BATMAN</h2>
-                </div>
-            </div>
-            <div class="current_row d-flex">
-                <div class="current_comics">
-                    <img src="img/futuredec.jpg" alt="">
-                    <h2 class="title">BATMAN</h2>
-                </div>
-                <div class="current_comics">
-                    <img src="img/futuregreen.jpg" alt="">
-                    <h2 class="title">BATMAN</h2>
-                </div>
-                <div class="current_comics">
-                    <img src="img/futurecat.jpg" alt="">
-                    <h2 class="title">BATMAN</h2>
-                </div>
-                <div class="current_comics">
-                    <img src="img/futureacqua.jpg" alt="">
-                    <h2 class="title">BATMAN</h2>
-                </div>
-                <div class="current_comics">
-                    <img src="img/futureharley.jpg" alt="">
-                    <h2 class="title">BATMAN</h2>
-                </div>
-                <div class="current_comics">
-                    <img src="img/futurebat.jpg" alt="">
-                    <h2 class="title">BATMAN</h2>
-                </div>
+                @endforeach
             </div>
         </div>
             @endsection

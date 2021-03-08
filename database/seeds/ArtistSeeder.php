@@ -10,7 +10,7 @@ class ArtistSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
         for ($i=0; $i < 20 ; $i++) {
             $newArtist = new Artist;

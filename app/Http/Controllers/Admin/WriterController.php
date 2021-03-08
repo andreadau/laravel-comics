@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Writer;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class WriterController extends Controller
@@ -39,9 +39,12 @@ class WriterController extends Controller
      */
     public function store(Request $request)
     {
-        $writer = new Writer;
-        $writer->name = $request->name;
-        $writer->save();
+        $request = $request->validate([
+            'name' => 'required',
+          ]);
+        $newWriter = new Writer;
+        $newWriter->name = $request['name'];
+        $newWriter->save();
         return redirect()->route('admin.writers.index');
     }
 
@@ -54,7 +57,6 @@ class WriterController extends Controller
     public function show($writer)
     {
         $writer = Writer::find($writer);
-
         return view('admin.writers.show', compact('writer'));
     }
 
@@ -64,7 +66,7 @@ class WriterController extends Controller
      * @param  \App\Writer  $writer
      * @return \Illuminate\Http\Response
      */
-    public function edit( $writer)
+    public function edit($writer)
     {
         $writer = Writer::find($writer);
         return view('admin.writers.edit', compact('writer'));
@@ -78,13 +80,15 @@ class WriterController extends Controller
      * @param  \App\Writer  $writer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $writer)
+    public function update(Request $request,$writer)
     {
+        $request = $request->validate([
+            'name' => 'required',
+          ]);
         $writer = Writer::find($writer);
-        $writer->name = $request->name;
+        $writer->name = $request['name'];
         $writer->update();
         return redirect()->route('admin.writers.index');
-
     }
 
     /**
@@ -93,7 +97,7 @@ class WriterController extends Controller
      * @param  \App\Writer  $writer
      * @return \Illuminate\Http\Response
      */
-    public function destroy( $writer)
+    public function destroy($writer)
     {
         $writer= Writer::find($writer);
         $writer->delete();

@@ -1,9 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
-    <div class="hero_img_comic" style="background-image: url(../storage/{{$comic->img }});
-        background-repeat: no-repeat; background-size: cover; background-position: 50%">
+    <div class="hero_img_comic"  style="background-image: url(../storage/{{$comic->cover }});">
         <div class="container">
             <img src="../storage/{{$comic->img}}" alt="">
         </div>

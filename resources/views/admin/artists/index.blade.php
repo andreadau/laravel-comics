@@ -31,7 +31,7 @@ GO TO ADMIN PANEL
               <td>{{$artist->updated_at}}</td>
 
               <td>
-                <form action="{{route('admin.artists.show', $artist )}}" method="get">
+                <form action="{{route('admin.artists.show', $artist->id )}}" method="get">
                   @csrf
                  <button type="submit" class="btn btn-primary"> <i class="fa fa-eye" aria-hidden="true"></i> </button>
                 </form>
